@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>过滤器的使用</title>
+</head>
+<body>
+当前共{{ girls | length}}人
+<br>
+{{ msg | safe}}
+<br>
+{{ n1 | capitalize}}
+<br>
+{{ n1 | lower }}
+<br>
+{{ n1 | upper}}
+<br>
+<!--每个单词首字母大写-->
+{{ n1 | title}}
+<br>
+{{ n1 | reverse }}
+<br>
+{{ '%s is %d years old' | format('lily',18) }}
+<br>
+{{ 'hello world' | truncate(5) | upper }}
+<hr>
+{{ girls | first }}
+<br>
+{{ girls | last }}
+<br>
+{{ girls | length }}
+<br>
+{{ [1,3,5,7,9] | sum }}
+<br>
+{{ [1,6,5,3,4] | sort }}
+<hr>
+<p>
+    {{ users.0 }}
+    <br>
+    {% for user in users.0.values() %}
+        <p>{{ user }}</p>
+    {% endfor %}
+
+    <br>
+    {% for k,v in users.0.items() %}
+        <p>{{ k }}---{{ v }}</p>
+    {% endfor %}
+
+    <br>
+    {% for user in users.0.keys() %}
+        <p>{{ user }}</p>
+    {% endfor %}
+</p>
+</body>
+</html>
