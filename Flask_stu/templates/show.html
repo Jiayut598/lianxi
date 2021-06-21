@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>显示所有学生</title>
+    <style>
+        table, table tr th, table tr td {
+            border: 1px solid #0094ff;
+        }
+
+        table {
+            width: 400px;
+            min-height: 25px;
+            line-height: 25px;
+            text-align: center;
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <form action="/show" method="POST">
+        <input type="submit" value="查看">
+        <table border="1" cellspacing="0">
+        <tr>
+            <td>ID</td>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>python</td>
+            <td>linux</td>
+            <td>shell</td>
+        </tr>
+
+        <!--            <td>{{data}}</td>-->
+
+        {% for data in datas %}
+        <tr>
+            <td>{{ data[0] }}</td>
+            <td>{{ data[1] }}</td>
+            <td>{{ data[2] }}</td>
+            <td>{{ data[3] }}</td>
+            <td>{{ data[4] }}</td>
+            <td>{{ data[5] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    </form>
+</body>
+</html>

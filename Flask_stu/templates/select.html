@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>查询学生</title>
+</head>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<style>
+    table,table tr th, table tr td { border:1px solid #0094ff; }
+    table { width: 400px; min-height: 25px; line-height: 25px; text-align: center; border-collapse: collapse;}
+</style>
+
+<body>
+    <form action="/select" method="POST">
+        请输入查询学生的ID<br>
+        <input type="text" name="select_name">
+        <input type="submit" value="提交">
+    </form>
+    <table border="1" cellspacing="0">
+        <tr>
+            <td>ID</td>
+            <td>姓名</td>
+            <td>性别</td>
+            <td>python</td>
+            <td>linux</td>
+            <td>shell</td>
+        </tr>
+        <tr id="tr">
+            <td>{{student_id}}</td>
+            <td>{{student_name}}</td>
+            <td>{{student_sex}}</td>
+            <td>{{student_python}}</td>
+            <td>{{student_linux}}</td>
+            <td>{{student_shell}}</td>
+        </tr>
+    </table>
+
+</body>
+</html>
